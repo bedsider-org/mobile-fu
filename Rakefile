@@ -16,7 +16,7 @@ end
 
 desc "Pull in data from Mobile Detect"
 task :pull_mobile_detect_data do
-  
+  # this command loses escaping on / in android silk. wachout!  
   # call out to Mobile Detect to get the data
   content = HTTParty.get(MOBILE_DETECT_JSON).body
 
